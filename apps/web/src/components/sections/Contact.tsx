@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 const Contact = () => (
   <section id="contact">
-    <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
+    <h1 className="text-4xl font-bold mb-8 lg:hidden">Contact Us</h1>
     <div className="grid gird-cols-1 lg:grid-cols-2 gap-12">
       <form className="p-4 sm:p-8 bg-card rounded-xl">
         <span className="font-semibold">Travel Tips, Guides, and Stories</span>
@@ -53,9 +53,9 @@ const Contact = () => (
                 <a href="tel:+96890699886">
                   <span className="font-medium">phone:</span> +968 90699886
                 </a>
-                <a href="mailto:hello@traveltrip.com">
+                <a href="mailto:hello@oneworld.tours">
                   <span className="font-medium">Email:</span>{" "}
-                  hello@traveltrip.com
+                  hello@oneworld.tours
                 </a>
               </div>
             </div>

@@ -24,7 +24,7 @@ function Header() {
   const user = null;
 
   return (
-    <header className="sticky top-0 z-20 bg-card flex items-center gap-4 py-4 section-container">
+    <header className="sticky top-0 z-20 bg-card flex items-center gap-4 py-4">
       <span className="text-2xl font-bold ">Traventure</span>
       <nav className="flex-1 max-lg:hidden">
         <ul className="flex items-center gap-6 w-max mx-auto bg-card px-4 py-2 rounded-full">

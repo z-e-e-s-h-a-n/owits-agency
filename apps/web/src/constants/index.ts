@@ -8,31 +8,68 @@ export const navLinks = [
 
 export const destinations = [
   {
-    title: "Santorini, Greece",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=100",
-    price: "$800 Starting",
+    title: "Baku, Azerbaijan",
+    price: "$700 Starting",
+    rating: 4.8,
+  },
+  {
+    title: "Kuala Lumpur, Malaysia",
+    price: "$650 Starting",
+    rating: 4.7,
+  },
+  {
+    title: "Bali, Indonesia",
+    price: "$850 Starting",
     rating: 5.0,
   },
   {
-    title: "Dubai Sky Drive",
-    image:
-      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=100",
-    price: "$800 Starting",
+    title: "Colombo, Sri Lanka",
+    price: "$600 Starting",
+    rating: 4.6,
+  },
+  {
+    title: "Dubai, UAE",
+    price: "$900 Starting",
     rating: 5.0,
   },
   {
-    title: "Dubai Tower",
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=100",
-    price: "$800 Starting",
+    title: "Istanbul, Turkey",
+    price: "$750 Starting",
+    rating: 4.8,
+  },
+  {
+    title: "Beijing, China",
+    price: "$700 Starting",
+    rating: 4.7,
+  },
+  {
+    title: "London, United Kingdom",
+    price: "$1000 Starting",
     rating: 5.0,
   },
   {
-    title: "Dubai Sky Drive",
-    image:
-      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80",
+    title: "New York, USA",
+    price: "$1100 Starting",
+    rating: 5.0,
+  },
+  {
+    title: "Zurich, Switzerland",
+    price: "$950 Starting",
+    rating: 5.0,
+  },
+  {
+    title: "Berlin, Germany",
     price: "$800 Starting",
+    rating: 4.8,
+  },
+  {
+    title: "Barcelona, Spain",
+    price: "$850 Starting",
+    rating: 4.9,
+  },
+  {
+    title: "Toronto, Canada",
+    price: "$950 Starting",
     rating: 5.0,
   },
 ];

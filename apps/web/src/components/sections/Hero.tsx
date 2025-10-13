@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MoveUpRight } from "lucide-react";
 
 const HeroSection = () => (
-  <section className="py-12 relative min-h-[80vh]  sm:min-h-screen  flex items-center">
+  <section className="py-12 relative min-h-[80vh] portrait:sm:min-h-[50vh] sm:min-h-screen  flex items-center">
     <div className="max-w-xl relative z-10">
       <h1 className="text-7xl font-semibold leading-tight mb-2 text-primary-foreground dark:text-secondary-foreground">
         Let's

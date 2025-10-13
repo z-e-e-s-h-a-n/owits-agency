@@ -2,15 +2,19 @@ import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
+export const metadata = {
+  title: "One World Travel & Tourism (Pvt.) Ltd.",
+  description:
+    "Trusted travel partner in Muscat, Oman 🌍. Offering Umrah packages, flights, hotels, visas & full travel assistance for individuals, families & groups.",
+};
+
 function Layout({ children }: LayoutProps) {
   return (
-    <div id="root">
+    <>
       <Header />
-      <main className="space-y-16 [&>section]:section-container">
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }
 

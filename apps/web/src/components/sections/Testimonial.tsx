@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -10,8 +10,30 @@ import {
 } from "@workspace/ui/components/carousel";
 
 const TestimonialsSection = () => {
+  const videoRefs = useRef<HTMLVideoElement[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    videoRefs.current.forEach((video) => observer.observe(video));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="flex flex-col items-center py-12 ">
+    <section className="flex flex-col items-center py-12">
       <span className="font-semibold text-sm uppercase tracking-wide text-gray-500">
         Real Stories from Satisfied Travelers
       </span>
@@ -20,24 +42,36 @@ const TestimonialsSection = () => {
         What Our Happy Clients Say
       </h2>
 
-      <Carousel className="w-full">
+      <Carousel className="w-full" opts={{ slidesToScroll: 1 }}>
         <CarouselContent>
-          {Array.from({ length: 4 }).map((_, index) => (
+          {Array.from({ length: 6 }).map((_, index) => (
             <CarouselItem
               key={index}
               className="basis-1/2 md:basis-1/3 lg:basis-1/4"
             >
-              <div className="relative aspect-[9/16] max-sm:max-h-[434px] overflow-hidden rounded-2xl border-1 bg-black">
+              <div className="relative aspect-[9/16] overflow-hidden rounded-2xl border bg-black">
                 <video
-                  src={`/videos/tiktok-${index + 1}.mp4`}
-                  className="w-full h-full object-cover"
+                  ref={(el) => {
+                    if (el) videoRefs.current[index] = el;
+                  }}
+                  className="size-full object-cover"
                   controls
-                  autoPlay
                   loop
                   muted
                   playsInline
+                  preload="none"
                   controlsList="nodownload"
-                />
+                >
+                  <source
+                    src={`/videos/tiktok-${index + 1}.webm`}
+                    type="video/webm"
+                  />
+                  <source
+                    src={`/videos/tiktok-${index + 1}.mp4`}
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </CarouselItem>
           ))}

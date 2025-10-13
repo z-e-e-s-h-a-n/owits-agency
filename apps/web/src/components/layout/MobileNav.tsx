@@ -68,7 +68,7 @@ const MobileNav = () => {
                 <ShoppingBag className="size-5" />
               </Button>
             </SheetClose>
-            <SheetClose asChild>
+            <SheetClose>
               <ThemeSwitch />
             </SheetClose>
           </div>

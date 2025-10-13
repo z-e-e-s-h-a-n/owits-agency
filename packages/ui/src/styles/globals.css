@@ -3,10 +3,11 @@
 @source "../../../components/**/*.{ts,tsx}";
 @source "../**/*.{ts,tsx}";
 
-
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant portrait (@media (orientation: portrait));
+@custom-variant landscape (@media (orientation: landscape));
 
 :root {
   --background: oklch(0.9821 0 0);
@@ -126,6 +127,10 @@
     @apply !border-border outline-ring/50;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -134,11 +139,40 @@
     @apply cursor-pointer;
   }
 
+  a,
+  span,
+  b,
+  strong,
+  i,
+  em,
+  u,
+  small,
+  abbr,
+  code,
+  img,
+  input,
+  label,
+  textarea,
+  select {
+    @apply inline-block;
+  }
+
   img {
     @apply max-w-full object-cover;
   }
 
+  header,
+  footer {
+    @apply section-container;
+  }
 
+  main {
+    @apply !space-y-16;
+
+    > section {
+      @apply section-container;
+    }
+  }
 }
 
 @utility flex-center {

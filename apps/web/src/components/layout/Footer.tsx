@@ -4,7 +4,7 @@ import Link from "next/link";
 import SocialIcons from "../ui/SocialIcons";
 
 const Footer = () => (
-  <footer className="space-y-8 py-12 border-t mt-8 section-container">
+  <footer className="space-y-8 py-12 border-t mt-8">
     <div className="flex flex-col md:flex-row justify-between gap-12">
       <div className="space-y-8">
         <h3 className="text-5xl font-semibold">

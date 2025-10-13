@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.oneworld.tours
+
+# Sitemaps
+Sitemap: https://www.oneworld.tours/sitemap.xml

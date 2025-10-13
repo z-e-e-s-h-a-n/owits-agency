@@ -7,7 +7,6 @@ import MoveUpRight from "@/components/icons/MoveUpRight";
 interface DestinationCardProps {
   dest: {
     title: string;
-    image: string;
     price: string;
     rating: number;
   };
@@ -15,13 +14,10 @@ interface DestinationCardProps {
 
 async function DestinationCard({ dest }: DestinationCardProps) {
   return (
-    <Link
-      href="#"
-      className="basis-1/4 rounded-2xl border overflow-hidden group"
-    >
+    <Link href="#" className="w-full rounded-2xl border overflow-hidden group">
       <div className="relative w-full">
         <Image
-          src={dest.image}
+          src={`/images/${dest.title}.jpg`}
           alt={dest.title}
           width={400}
           height={400}

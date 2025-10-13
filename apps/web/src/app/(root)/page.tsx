@@ -14,7 +14,7 @@ function Home() {
       <ServicesSection />
       <WhyChooseUs />
       <FaqSection />
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
       <Contact />
     </>
   );

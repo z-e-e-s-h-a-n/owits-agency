@@ -3,6 +3,16 @@ import Image from "@/components/ui/Image";
 
 const services = [
   {
+    icon: "/icons/umrah-2.png",
+    title: "Umrah Packages",
+    desc: "Tailored Umrah journeys with reliable arrangements and guidance.",
+  },
+  {
+    icon: "/icons/tour-guide-1.png",
+    title: "Group Tours",
+    desc: "Join guided group adventures for shared experiences and savings.",
+  },
+  {
     icon: "/icons/ticket-flight.png",
     title: "Hassle-Free Ticketing",
     desc: "All-in-one ticket booking, from flights to events, with ease.",
@@ -26,16 +36,6 @@ const services = [
     icon: "/icons/travel-insurance-3.png",
     title: "Travel Insurance",
     desc: "Stay protected with coverage for medical, cancellations, and more.",
-  },
-  {
-    icon: "/icons/tour-guide-1.png",
-    title: "Group Tours",
-    desc: "Join guided group adventures for shared experiences and savings.",
-  },
-  {
-    icon: "/icons/umrah-2.png",
-    title: "Umrah Packages",
-    desc: "Tailored Umrah journeys with reliable arrangements and guidance.",
   },
   {
     icon: "/icons/tour-2.png",
