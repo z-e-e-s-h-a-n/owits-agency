@@ -1,3 +1,11 @@
+export const navLinks = [
+  { href: "/", label: "HOME" },
+  { href: "#destinations", label: "DESTINATION" },
+  { href: "#services", label: "SERVICES" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "CONTACT" },
+];
+
 export const destinations = [
   {
     title: "Santorini, Greece",

@@ -40,6 +40,7 @@ export type ButtonProps = React.ComponentProps<"button"> &
   ButtonVariants & {
     asChild?: boolean;
     href?: string;
+    target?: React.HTMLAttributeAnchorTarget;
   };
 
 function Button({
@@ -48,6 +49,7 @@ function Button({
   size,
   asChild = false,
   href,
+  target,
   ...props
 }: ButtonProps) {
   const Comp = asChild ? Slot : "button";
@@ -58,7 +60,9 @@ function Button({
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
-      <Link href={href}>{props.children}</Link>
+      <Link href={href} target={target}>
+        {props.children}
+      </Link>
     </Slot>
   ) : (
     <Comp

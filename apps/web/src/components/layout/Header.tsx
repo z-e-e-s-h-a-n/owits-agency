@@ -16,23 +16,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@workspace/ui/lib/utils";
 import ThemeSwitch from "@/components/ui/ThemeSwitch";
+import { navLinks } from "@/constants";
+import MobileNav from "./MobileNav";
 
 function Header() {
   const pathname = usePathname();
-
-  const navLinks = [
-    { href: "/", label: "HOME" },
-    { href: "/destinations", label: "DESTINATION" },
-    { href: "/services", label: "SERVICES" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/contact", label: "CONTACT" },
-  ];
+  const user = null;
 
   return (
-    <header className="flex items-center gap-4 py-4">
-      <span className="text-2xl font-bold m-auto">Traventure</span>
-      <nav className="flex-center gap-4 flex-1">
-        <ul className="flex items-center gap-6 mx-auto bg-card px-4 py-2 rounded-full">
+    <header className="sticky top-0 z-20 bg-card flex items-center gap-4 py-4 section-container">
+      <span className="text-2xl font-bold ">Traventure</span>
+      <nav className="flex-1 max-lg:hidden">
+        <ul className="flex items-center gap-6 w-max mx-auto bg-card px-4 py-2 rounded-full">
           {navLinks.map((link) => {
             const isActive = pathname.endsWith(link.href);
 
@@ -49,18 +44,21 @@ function Header() {
             );
           })}
         </ul>
-        <div className="flex items-center gap-4">
-          <div className="space-x-2">
-            <Button size="icon" variant="outline" className="rounded-full">
-              <Heart />
-            </Button>
-            <Button size="icon" variant="outline" className="rounded-full">
-              <ShoppingBag />
-            </Button>
-            <ThemeSwitch />
-          </div>
+      </nav>
+      <div className="flex items-center gap-4 ml-auto">
+        <div className="space-x-2 max-sm:hidden">
+          <Button size="icon" variant="outline" className="rounded-full">
+            <Heart />
+          </Button>
+          <Button size="icon" variant="outline" className="rounded-full">
+            <ShoppingBag />
+          </Button>
+          <ThemeSwitch />
+        </div>
+
+        {user ? (
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer">
+            <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer max-sm:hidden">
               <Avatar>
                 <AvatarImage
                   src="https://github.com/shadcn.png"
@@ -77,8 +75,11 @@ function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent></DropdownMenuContent>
           </DropdownMenu>
-        </div>
-      </nav>
+        ) : (
+          <Button className=" max-sm:hidden"> Login</Button>
+        )}
+        <MobileNav />
+      </div>
     </header>
   );
 }

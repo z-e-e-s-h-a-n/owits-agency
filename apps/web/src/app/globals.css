@@ -2,6 +2,6 @@
 
 @layer base {
   #root {
-    @apply container mx-auto;
+    @apply w-full mx-auto
   }
 }

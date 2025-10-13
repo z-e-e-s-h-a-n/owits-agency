@@ -10,8 +10,6 @@ function ReviewAvatars({ variant = "default" }: ReviewAvatarsProps) {
   return variant === "default" ? (
     Array.from({ length: 5 }, (_, i) => (
       <Image
-        type="remote"
-        wrap={true}
         key={i}
         src={`https://randomuser.me/api/portraits/men/${i + 1}.jpg`}
         alt={`portrait-${i + 1}`}
@@ -27,8 +25,6 @@ function ReviewAvatars({ variant = "default" }: ReviewAvatarsProps) {
       <div className="flex items-center">
         {Array.from({ length: 4 }, (_, i) => (
           <Image
-            type="remote"
-            wrap={true}
             key={i}
             src={`https://randomuser.me/api/portraits/men/${i + 40}.jpg`}
             alt={`portrait-${i + 1}`}

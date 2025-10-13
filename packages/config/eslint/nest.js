@@ -1,4 +1,3 @@
-import tseslint from "typescript-eslint";
 import globals from "globals";
 import { config as baseConfig } from "./base.js";
 

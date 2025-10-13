@@ -6,7 +6,9 @@ function Layout({ children }: LayoutProps) {
   return (
     <div id="root">
       <Header />
-      <main>{children}</main>
+      <main className="space-y-16 [&>section]:section-container">
+        {children}
+      </main>
       <Footer />
     </div>
   );

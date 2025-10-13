@@ -6,8 +6,12 @@ import { useTheme } from "next-themes";
 import { Button, type ButtonProps } from "@workspace/ui/components/button";
 
 function ThemeSwitch(props: ButtonProps) {
-  const { setTheme, theme } = useTheme();
-  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+  const { setTheme, theme, systemTheme } = useTheme();
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
+  const toggleTheme = () =>
+    setTheme(currentTheme === "dark" ? "light" : "dark");
 
   return (
     <Button
@@ -17,7 +21,7 @@ function ThemeSwitch(props: ButtonProps) {
       {...props}
       onClick={toggleTheme}
     >
-      {theme === "dark" ? (
+      {currentTheme === "dark" ? (
         <Moon className="text-white" />
       ) : (
         <Sun className="text-black" />

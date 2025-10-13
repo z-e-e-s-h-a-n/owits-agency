@@ -12,7 +12,7 @@ function MoveUpRight({ className, iconCn, ...props }: IconProps) {
       size="icon"
       variant="secondary"
       {...props}
-      className={cn("rounded-full size-12", className)}
+      className={cn("rounded-full size-12 hover:bg-primary", className)}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
