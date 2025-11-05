@@ -73,7 +73,7 @@ const Contact = () => (
           </div>
           <div className="flex items-center gap-4">
             <Map />
-            Office #12, Near Karachi Bakers, Shahi Wala Bangla, Ahmadpur East
+            Office #LG126, Saddiq Trade Center, Gulberg, Lahore, Pakistan
           </div>
         </div>
       </div>
