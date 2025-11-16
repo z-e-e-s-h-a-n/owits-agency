@@ -1,0 +1,20 @@
+{
+  "extends": "@workspace/config/typescript/nest",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/decorators/*": ["src/common/decorators/*"],
+      "@/dto/*": ["src/common/dto/*"],
+      "@/filters/*": ["src/common/filters/*"],
+      "@/guards/*": ["src/common/guards/*"],
+      "@/interceptors/*": ["src/common/interceptors/*"],
+      "@/pipes/*": ["src/common/pipes/*"],
+      "@/schemas/*": ["src/common/schemas/*"],
+      "@/templates/*": ["src/common/templates/*"]
+    }
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
